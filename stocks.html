@@ -1,0 +1,77 @@
+
+<html>
+    <head>
+        <title>Assignment 2 - Stocks Page</title>
+        <link rel="stylesheet" href="styles.css">
+        <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer src="assignment2.js"></script>
+    </head>
+    <body>
+        <h1>INST377 - Activities</h1>
+        
+        <nav>
+            <nav id="navBar">
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="stocks.html">Stocks</a></li>
+                    <li><a href="dogs.html">Dogs</a></li>
+                </ul>
+        </nav>
+        <h1>Let's chart some stocks!</h1>
+        
+        <form id="stocksForm">
+            <input type="text" maxlength="5" id="stockInput">
+            <br>
+            <select name="days" id="daysSelect">
+                <option value="30">30 Days</option>
+                <option value="60">60 Days</option>
+                <option value="90">90 Days</option>
+            </select>
+            <br>
+            <input type="submit" class="button-12">
+        </form>
+       
+        <div id="chartContainer">
+            <canvas id="myChart"></canvas>
+        </div>
+        
+        <table id="top 5 stocks table">
+            <tr>
+                <th>Ticker</th>
+                <th>Comment Count</th>
+                <th>Sentiment</th>
+            </tr>
+        </table>
+        
+        <div class="audioContainer">
+            <h1>In this web page there are options to Navigate using Audio!</h1>
+            <p>Ensure your mic is enable to be able to use this feature.</p>
+            <ul>
+                <li>Lookup a stock</li>
+                    <ul>
+                        <li>Example:</li>
+                            <ul>
+                                <li>Say: <strong>Lookup &lt;stock ticker></stock></strong></li>
+                            </ul>
+                    </ul>
+                <li>Navigate to a different page</li>
+                    <ul>
+                        <li>Say: <strong>Navigate to &lt;page></strong></li>
+                    </ul>
+                <li>Change the page color</li>
+                    <ul>
+                        <li>Say: <strong>Change the color to &lt;color></strong></li>
+                    </ul>
+                <li>Say Hello Back to you!</li>
+                    <ul>
+                        <li>Say: <strong>Hello</strong></li>
+                    </ul>
+            </ul>
+            <div class="listeningButtons">
+                <button class='button-19' id="onButton">Turn On Listening</button>
+                <button class='button-19' id="offButton">Turn Off Listening</button>
+            </div>
+        </div>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.1/annyang.min.js"></script>
+    </body>
+</html>
